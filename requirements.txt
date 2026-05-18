@@ -1,13 +1,6 @@
-numpy
-tensorflow
-keras
+streamlit==1.36.0
+numpy==1.26.4
+tensorflow==2.15.0
 music21
-pandas
-scikit-learn
-matplotlib
-tqdm
-mido
-pretty_midi
-midi2audio
-pygame
 gdown
+protobuf==4.25.3
