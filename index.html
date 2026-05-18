@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Music Generator</title>
+</head>
+<body>
+
+<h1>🎹 AI Music Generator</h1>
+
+<button onclick="generateMusic()">Generate Music</button>
+
+<script>
+function generateMusic() {
+    fetch("http://127.0.0.1:5000/generate?notes=200")
+        .then(response => response.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "generated_music.mid";
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+        });
+}
+</script>
+
+</body>
+</html>
